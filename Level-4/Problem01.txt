@@ -1,0 +1,43 @@
+// Problem Solution
+
+#include <iostream>
+
+
+using namespace std;
+
+/*int readPositive(int FROM, int TO) {
+    int i= 0;
+    int j= 0;
+    while (counter < TO) {
+        array[counter] = FROM;
+        FROM += 1;
+        counter += 1;
+    }
+    return array[10];
+}*/
+
+void printHeader(int FROM , int TO) {
+    for (int counter = FROM; counter <= TO; counter++) {
+        cout << "\t  " << counter;
+    }
+    cout << "\n_________________________________________________________________________________________\n";
+}
+
+void printMultiplication(int FROM, int TO) {
+    printHeader(FROM, TO);
+    for (int i = FROM; i <= TO; i++) {
+        cout << i << "\t| ";
+        for (int j = FROM; j <= TO; j++) {
+            cout << i * j << "\t ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    cout << "This program calculate Multiplication table FROM 1 TO 10:" << endl;
+    printMultiplication(1, 10);
+
+    return 0;
+}

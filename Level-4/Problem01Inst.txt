@@ -1,0 +1,55 @@
+//Problem 01 Instructor's Solution
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int readPositiveNumber(string message){
+    int number;
+    do {
+        cout << message;
+        cin >> number;
+    } while (number < 0);
+
+    return number;
+}
+
+void printTableHeader() {
+    cout << "\n\n\t\t\t This proogram print the multiplication table from 1 to 10 \n\n";
+    cout << "\t";
+
+    for(int i=1; i<=10; i++){
+        cout << i << "\t";
+    }
+    cout << "\n-----------------------------------------------------------------------------------------\n";
+}
+
+string printSeparator(int number) {
+    if (number < 10)
+        return "   |";
+    else
+        return "  |";
+}
+
+void printMultiplicationTable() {
+    
+    printTableHeader();
+
+    for (int i = 1; i <= 10; i++) {
+        cout <<  " "  << i << printSeparator(i) << "\t";
+        for (int j = 1; j <= 10; j++) {
+            cout << i * j << "\t";
+        }
+        cout << endl;
+    }
+
+
+}
+
+int main()
+{
+    
+    //readPositiveNumber("Please enter a positive number: ");
+    printMultiplicationTable();
+}
